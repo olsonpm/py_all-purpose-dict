@@ -108,7 +108,7 @@ willing to add it so please just raise a github issue or PR with details.*
 
 ### Test
 
-```py
+```sh
 #
 # you must have poetry installed
 #
