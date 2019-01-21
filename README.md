@@ -13,14 +13,6 @@
 - [Simple usage](#simple-usage)
 - [See Also](#see-also)
 - [Api](#api)
-  - [class ApDict([a list of pairs])](#class-apdicta-list-of-pairs)
-    - [clear()](#clear)
-    - [delete(key)](#deletekey)
-    - [get(key) => value](#getkey--value)
-    - [has(key) => bool](#haskey--bool)
-    - [keysIterator() => ApDictKeysIterator](#keysiterator--apdictkeysiterator)
-    - [set(key, value)](#setkey-value)
-    - [valuesIterator() => ApDictValuesIterator](#valuesiterator--apdictvaluesiterator)
 - [Test](#test)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
