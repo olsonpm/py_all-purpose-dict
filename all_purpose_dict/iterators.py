@@ -3,6 +3,9 @@ class ApDictIterator:
         self._inst = apDictInst
         self._orderedKeysIterator = iter(apDictInst._orderedKeys)
 
+    def __iter__(self):
+        return self
+
     def __next__(self):
         hashable, keyOrId = next(self._orderedKeysIterator)
 
