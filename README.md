@@ -83,8 +83,9 @@ willing to add it so please just raise a github issue or PR with details.*
 ##### delete(key)
 - a function alternative to `del aDict[key]`
 
-##### get(key) => value
-- a function alternative to `val = aDict[key]`
+##### get(key, default=None) => value
+- get the value for key if key is in the dictionary, else default.
+- *note: this never raises a KeyError.*
 
 ##### has(key) => bool
 - a function alternative to `key in aDict`
