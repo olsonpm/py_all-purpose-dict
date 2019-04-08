@@ -230,18 +230,18 @@ def runTests():
 
     # get all keys
     key = {}
-    code = "result.keysIterator()"
+    code = "result.getKeysIterator()"
     result = ApDict([(key, "a val"), ("a key", "another val")])
-    allKeys = list(result.keysIterator())
+    allKeys = list(result.getKeysIterator())
     passed = allKeys == [key, "a key"]
     if not passed:
         errors.append(code)
 
     # get all values
     key = {}
-    code = "result.valuesIterator()"
+    code = "result.getValuesIterator()"
     result = ApDict([(key, "a val"), ("a key", "another val")])
-    values = list(result.valuesIterator())
+    values = list(result.getValuesIterator())
     passed = values == ["a val", "another val"]
     if not passed:
         errors.append(code)

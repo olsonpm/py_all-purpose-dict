@@ -90,12 +90,12 @@ willing to add it so please just raise a github issue or PR with details.*
 ##### has(key) => bool
 - a function alternative to `key in aDict`
 
-##### keysIterator() => ApDictKeysIterator
+##### getKeysIterator() => ApDictKeysIterator
 
 ##### set(key, value)
 - a function alternative to `aDict[key] = val`
 
-##### valuesIterator() => ApDictValuesIterator
+##### getValuesIterator() => ApDictValuesIterator
 
 <br>
 

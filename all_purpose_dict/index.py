@@ -114,13 +114,13 @@ class ApDict:
         except:
             return id(key) in self._nonHashableData
 
-    def keysIterator(self):
+    def getKeysIterator(self):
         return iterators.ApDictKeysIterator(self)
 
     def set(self, key, value):
         return self._set(key, value)
 
-    def valuesIterator(self):
+    def getValuesIterator(self):
         return iterators.ApDictValuesIterator(self)
 
 
