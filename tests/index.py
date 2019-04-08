@@ -49,13 +49,23 @@ def runTests():
         errors.append(code)
 
     # get -> key error
-    code = "result.get('doesnt exist')"
+    code = "result['doesnt exist']"
     try:
-        result.get("doesnt exist")
+        result["doesnt exist"]
         errors.append(code)
     except KeyError:
         pass
     except:
+        errors.append(code)
+
+    # get -> None by default
+    code = "result.get('doesnt exist') == None"
+    if result.get("doesnt exist") is not None:
+        errors.append(code)
+
+    # get -> default value
+    code = "result.get('doesnt exist', 'whatever') == 'whatever'"
+    if result.get("doesnt exist", "whatever") != "whatever":
         errors.append(code)
 
     # delete -> key error

@@ -26,6 +26,19 @@ class ApDict:
         self._nonHashableData = {}
         self._populateData(listOfPairs)
 
+    #
+    # returns a tuple of (hasKey, value=None)
+    #
+    def _get(self, key):
+        try:
+            if key in self._hashableData:
+                return (True, self._hashableData[key])
+        except:
+            if id(key) in self._nonHashableData:
+                return (True, self._nonHashableData[id(key)][1])
+
+        return (False, None)
+
     def _populateData(self, listOfPairs):
         for key, value in listOfPairs:
             self._set(key, value)
@@ -47,7 +60,12 @@ class ApDict:
         return self.delete(key)
 
     def __getitem__(self, key):
-        return self.get(key)
+        hasKey, val = self._get(key)
+
+        if not hasKey:
+            raise KeyError(f"the key '{str(key)}' does not exist in ApDict")
+
+        return val
 
     def __iter__(self):
         return iterators.ApDictIterator(self)
@@ -82,15 +100,13 @@ class ApDict:
 
         return self
 
-    def get(self, key):
-        try:
-            if key in self._hashableData:
-                return self._hashableData[key]
-        except:
-            if id(key) in self._nonHashableData:
-                return self._nonHashableData[id(key)][1]
+    def get(self, key, default=None):
+        hasKey, val = self._get(key)
 
-        raise KeyError(f"the key '{str(key)}' does not exist in ApDict")
+        if not hasKey:
+            return default
+
+        return val
 
     def has(self, key):
         try:

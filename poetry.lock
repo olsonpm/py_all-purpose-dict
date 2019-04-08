@@ -24,6 +24,18 @@ version = "0.1.0"
 
 [[package]]
 category = "dev"
+description = "like dedent but more flexible"
+name = "tedent"
+optional = false
+python-versions = ">=3.7,<4.0"
+version = "0.1.1"
+
+[package.dependencies]
+ordered_set = ">=3.1,<4.0"
+wrapt = ">=1.11,<2.0"
+
+[[package]]
+category = "dev"
 description = "Python Library for Tom's Obvious, Minimal Language"
 name = "toml"
 optional = false
@@ -36,15 +48,16 @@ description = "Module for decorators, wrappers and monkey patching."
 name = "wrapt"
 optional = false
 python-versions = "*"
-version = "1.10.11"
+version = "1.11.1"
 
 [metadata]
-content-hash = "d2f21a5bb5a6a15cb714980cb687db156aa48a21693b6df7c8d79ecaa07a8bee"
+content-hash = "a36b254db8bf3ec5f5549e7745d423a6256c29db9c7de618e0b3eddbad0ecd79"
 python-versions = "^3.7"
 
 [metadata.hashes]
 is-git-repo-clean = ["608c8585be23478af5c6c68e53f4a8ddd1320d3dd478ebc894c07ab6b702dc00", "c33ec4893389943c6f2b7351ff65904726640861b444ec37b3afb8870a9917fa"]
 ordered-set = ["41c7ba85e7619cd4c71e38d4cd434f84de8473b826919eb79274b3a11b940b4d", "f9b703ea9aa9c1db44412c5ba1c16cf8b7ad7ef37a685e4da2fd3754b40f8f6a"]
 simple-chalk = ["d80f55993dfa040c1b55d2fbfb925e4fbb5798c2934601aa448ef4a192d84196"]
+tedent = ["a2565f469f9044c9f6117962bea67da6ee3b71e112d055128414ba86c15ca1ae", "b83bb8eba0a8c53b1597e3c18a0cefdaeeb83cf64d3f6ca5e5973195778a9eec"]
 toml = ["229f81c57791a41d65e399fc06bf0848bab550a9dfd5ed66df18ce5f05e73d5c", "235682dd292d5899d361a811df37e04a8828a5b1da3115886b73cf81ebc9100e", "f1db651f9657708513243e61e6cc67d101a39bad662eaa9b5546f789338e07a3"]
-wrapt = ["d4d560d479f2c21e1b5443bbd15fe7ec4b37fe7e53d335d3b9b0a7b1226fe3c6"]
+wrapt = ["4aea003270831cceb8a90ff27c4031da6ead7ec1886023b80ce0dfe0adf61533"]
