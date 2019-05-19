@@ -2,7 +2,7 @@
 # Imports #
 # ------- #
 
-from ordered_set import OrderedSet
+from ..._vendor.ordered_set import OrderedSet
 from .getTypedResult import getTypedResult
 
 

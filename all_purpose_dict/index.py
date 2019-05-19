@@ -2,7 +2,7 @@
 # Imports #
 # ------- #
 
-from ordered_set import OrderedSet
+from ._vendor.ordered_set import OrderedSet
 from .fns import discardWhen, isLaden, raise_
 from . import iterators
 
@@ -157,6 +157,6 @@ def validateListOfPairs(listOfPairs):
 
 
 def isListOrTupleOfLen2(something):
-    return (
-        isinstance(something, list) or isinstance(something, tuple)
-    ) and len(something) == 2
+    return (isinstance(something, list) or isinstance(something, tuple)) and len(
+        something
+    ) == 2

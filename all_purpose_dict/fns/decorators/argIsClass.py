@@ -1,5 +1,5 @@
 from inspect import isclass, signature
-import wrapt
+from ..._vendor import wrapt
 
 
 @wrapt.decorator
