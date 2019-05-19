@@ -1,4 +1,4 @@
-from ..._vendor.tedent import tedent
+from textwrap import dedent
 from .isOnlyWhitespace import isOnlyWhitespace
 import os
 
@@ -6,7 +6,7 @@ import os
 def raise_(errorClass, message, *, fromException=None):
     allLines = message.split(os.linesep)
     if isOnlyWhitespace(allLines[0]) and isOnlyWhitespace(allLines[-1]):
-        message = tedent(message)
+        message = dedent(message)
 
     err = errorClass(message)
 

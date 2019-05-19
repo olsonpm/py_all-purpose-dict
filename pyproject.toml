@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "all_purpose_dict"
-version = "0.2.3"
+version = "0.2.4"
 description = "A dict that works with both hashable and non-hashable keys"
 authors = ["Philip Olson <philip.olson@pm.me>"]
 license = "WTFNMFPL-1.0"
@@ -26,6 +26,7 @@ target="all_purpose_dict/_vendor"
 packages=[
   "ordered_set >=3.1,<3.2",
   "wrapt >=1.10,<1.11",
+  "tedent >=0.1.5,<0.2",
 ]
 
 [build-system]
