@@ -1,12 +1,15 @@
 [tool.poetry]
 name = "all_purpose_dict"
-version = "0.2.1"
+version = "0.2.2"
 description = "A dict that works with both hashable and non-hashable keys"
 authors = ["Philip Olson <philip.olson@pm.me>"]
 license = "WTFNMFPL-1.0"
 readme = "README.md"
 repository = "https://github.com/olsonpm/py_all-purpose-dict"
-include = ["all_purpose_dict/license.txt"]
+include = [
+  "all_purpose_dict/license.txt",
+  "all_purpose_dict/top_level.txt",
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
