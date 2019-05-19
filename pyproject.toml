@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "all_purpose_dict"
-version = "0.2.2"
+version = "0.2.3"
 description = "A dict that works with both hashable and non-hashable keys"
 authors = ["Philip Olson <philip.olson@pm.me>"]
 license = "WTFNMFPL-1.0"
